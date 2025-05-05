@@ -1,0 +1,11 @@
+from skelton.map           import map           as map
+from skelton.map_2d        import map_2d        as map_2d
+from skelton.map_ow        import map_ow        as map_ow
+from skelton.map_ow_2d     import map_ow_2d     as map_ow_2d
+from skelton.reduce        import reduce        as reduce
+from skelton.reduce_2d     import reduce_2d     as reduce_2d
+from skelton.zipwith       import zipwith       as zipwith
+from skelton.zipwith_2d    import zipwith_2d    as zipwith_2d
+from skelton.zipwith_ow    import zipwith_ow    as zipwith_ow
+from skelton.zipwith_ow_2d import zipwith_ow_2d as zipwith_ow_2d
+from skelton.output        import output        as output
