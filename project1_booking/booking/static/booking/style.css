@@ -1,0 +1,134 @@
+/* 全体レイアウト調整 */
+body {
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 80px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* ナビゲーションバー */
+nav {
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+nav > a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav > a:hover {
+    text-decoration: underline;
+}
+
+/* メッセージ表示 */
+p {
+    color: #333;
+    font-size: 14px;
+}
+
+/* カレンダーテーブルの強調 */
+table th {
+    background-color: #e9f3ff;
+    font-weight: bold;
+}
+
+table td {
+    background-color: white;
+    vertical-align: middle;
+    height: 40px;
+}
+
+table td a {
+    color: #007bff;
+    font-weight: bold;
+}
+
+table td a:hover {
+    text-decoration: underline;
+}
+
+/* ○×記号スタイル（カレンダー） */
+td:has(a[href]) {
+    background-color: #e6f0ff;
+}
+
+td:has(a[href]:hover) {
+    background-color: #cfe5ff;
+}
+
+/* 予約フォーム */
+form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.form-example {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* 送信ボタン */
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* 予約記号の共通スタイル */
+.symbol {
+    font-size: 24px; /* 大きくする */
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+/* ○（予約可能）リンク付き */
+.symbol.available {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.symbol.available:hover {
+    text-decoration: underline;
+    background-color: #e6f0ff;
+}
+
+/* ×（予約不可） */
+.symbol.unavailable {
+    color: #999;
+}
+
+/* -（過去） */
+.symbol.disabled {
+    color: #ccc;
+}

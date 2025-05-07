@@ -1,0 +1,18 @@
+{% extends 'booking/base.html' %}
+
+{% block content %}
+    
+    <ul>
+        <li><a href="{% url 'booking:staff_calendar' %}">カレンダー</a></li>
+    </ul>
+    <h2>直近の予約</h2>
+    <ul>
+        {% for schedule in schedule_list %}
+            {%if schedule.class_num != 0%}
+                <li><a href="{% url 'booking:staff_schedule' schedule.pk%}">{{ schedule }}</li>
+            {%endif%}
+        {% empty %}
+            <li>予約はありません。</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'booking/base.html' %}
+
+{% block content %}
+    <p>{{ view.kwargs.year }}年{{ view.kwargs.month }}月{{ view.kwargs.day }}日 {{ view.kwargs.hour }}時に予約</p>
+    <form action="" method="POST">
+        <div class="form-example">
+            <label for="name">名前: </label>
+            <input type="text" name="name" id="name" required />
+        </div>
+        <div class="form-example">
+            <label for="class_num">組　: </label>
+            <input type="number" name="class_num" id="class_num" required />
+        </div>
+        <div class="form-example">
+            <label for="id_num">番号: </label>
+            <input type="number" name="id_num" id="id_num" required />
+        </div>
+        {% csrf_token %}
+        <button type="submit">送信</button>
+    </form>
+{% endblock %}
