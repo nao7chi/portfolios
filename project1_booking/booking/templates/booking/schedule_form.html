@@ -1,0 +1,15 @@
+{% extends 'booking/base.html' %}
+
+{% block content %}
+
+    <form action="" method="POST">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button type="submit">変更</button>
+    </form>
+    <hr>
+    <form action="{% url 'booking:schedule_delete' schedule.pk%}" method="POST">
+        {% csrf_token %}
+        <button type="submit">削除</button>
+    </form>
+{% endblock %}

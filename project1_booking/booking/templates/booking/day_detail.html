@@ -1,0 +1,29 @@
+{% extends 'booking/base.html' %}
+
+{% block content %}
+
+    <p>{{ view.kwargs.year }}年{{ view.kwargs.month }}月{{ view.kwargs.day }}日の予約一覧</p>
+    <table class="table table-bordered text-center" style="table-layout: fixed;width: 100%" border="1">
+        {% for hour, schedules in calendar.items %}
+            <tr style="font-size:12px">
+                <td>
+                    {{ hour }}:00
+                </td>
+                <td>
+                    {% if schedules %}
+                        {% for s in schedules %}
+                        <a href="{% url 'booking:staff_schedule' s.pk%}">{{ s.class_num }}組{{s.id_num}}番：{{s.name}} </a>
+                        {% endfor %}
+                    {% else %}
+                        <form action="{% url 'booking:staff_rest_add' view.kwargs.year view.kwargs.month view.kwargs.day hour %}"
+                              method="POST">
+                            {% csrf_token %}
+                            <button type="submit">お休みにする</button>
+                        </form>
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+
+    </table>
+{% endblock %}
