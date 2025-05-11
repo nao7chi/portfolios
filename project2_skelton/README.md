@@ -17,12 +17,14 @@ Cerebras CS-2という機械学習を高速化させるために作られたマ�
 - ユーザはPE間通信や状態遷移を意識する必要がない。
 
 ##  コードの構成
-- code-generator __（本体）__
+- code-generator/ __（本体）__
   - コード変換を行う code-generator と生成コードの雛形を持つ code-format から成る。 test.py はテスト用コード。
-- skeloton-module
+- skeloton-module/
   - Pythonで利用できる並列スケルトン関数群。
-- sample-result
+- sample-result/
   - コード生成の例。 test.py のコードを code-generator の引数に渡して実行すると、残りの4つのコードが生成される。
+- ppl2025.pdf __（発表資料）__
+  - この研究テーマで[ppl2025](https://jssst-ppl.org/workshop/2025/program.html)にて発表したポスター。
 
 ##  使用技術
 - Python3 / ast
