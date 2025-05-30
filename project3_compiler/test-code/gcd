@@ -1,0 +1,11 @@
+{
+    x = getd();
+    y = getd();
+    while (y != 0) {
+        r = x%y;
+        x = y;
+        y = r;
+    }
+    putd(x, 5);
+    newline();
+}

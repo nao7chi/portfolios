@@ -1,0 +1,14 @@
+{
+    x = getd();
+    d = 2;
+    while (d*d <= x)
+        if (x%d == 0) {
+            putd(d, 5);
+            x = x/d;
+        }
+        else
+            d = d+1;
+    if (x > 1)
+        putd(x, 5);
+    newline();
+}
