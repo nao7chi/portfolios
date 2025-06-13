@@ -12,5 +12,8 @@
 - [CS-2のコーディングをサポートする並列スケルトン](https://github.com/nao7chi/portfolios/tree/main/project2_skelton)  
   Pythonを用いて作成した、コード生成を行うアプリケーションおよび、それを学会で発表した際のポスター
 
+- [C言語を模した、簡易言語へのコンパイラ、インタプリタ](https://github.com/nao7chi/portfolios/tree/main/project3_compiler)  
+  Javaを用いて作成した、コンパイラ、インタプリタ
+
 
 詳細は、それぞれのプロジェクトのREADMEに記載しています。
